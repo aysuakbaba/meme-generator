@@ -46,3 +46,55 @@ body{
   font-size: 17px;
   font-weight: 300;
 }
+
+.meme{
+  padding: 30px;
+}
+
+
+.meme--form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 1500px;
+  gap: 30px;
+}
+
+.form--top{
+  display: flex;
+  gap: 60px;
+  
+  
+}
+
+.form--top input[type=text]{
+  display: inline-block;
+  border: 2px solid rgb(180, 176, 176);
+  width: 100%;
+  padding: 20px 180px 20px 0px;
+  margin: 8px 0;
+  border-radius: 8px;
+  font-family: 'Kodchasan', sans-serif;
+  text-indent: 5px;
+  font-size: 15px;
+  
+}
+
+
+
+button{
+  width: 800px;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  background: rgb(103,34,128);
+  background: linear-gradient(90deg, rgba(103,34,128,1) 35%, rgba(166,38,211,1) 100%);
+  font-family: 'Kodchasan', sans-serif;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
