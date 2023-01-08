@@ -3,3 +3,46 @@
   padding: 0;
   margin: 0;
 }
+
+body{
+  height: 100vh;
+}
+
+.header{
+  height: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(103,34,128);
+  background: linear-gradient(90deg, rgba(103,34,128,1) 35%, rgba(166,38,211,1) 100%);
+}
+
+.header--left{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+ 
+}
+
+.header--title{
+  color: white;
+  font-size: 30px;
+  font-family: 'Kodchasan', sans-serif;
+  font-weight: 700;
+  
+  
+}
+.header--left img{
+  height: 35px;
+  width: 35px;
+}
+
+.header--right{
+  color: white;
+  font-family: 'Kodchasan', sans-serif;
+  letter-spacing: 1px;
+  font-size: 17px;
+  font-weight: 300;
+}
