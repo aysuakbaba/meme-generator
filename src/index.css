@@ -49,24 +49,18 @@ body{
 
 .meme{
   padding: 30px;
-}
-
-
-.meme--form{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 200px;
-  width: 1500px;
   gap: 30px;
 }
+
+
 
 .form--top{
   display: flex;
   gap: 60px;
-  
-  
 }
 
 .form--top input[type=text]{
