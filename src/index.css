@@ -8,16 +8,6 @@ body{
   height: 100vh;
 }
 
-.header{
-  height: 80px;
-  padding-left: 20px;
-  padding-right: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgb(103,34,128);
-  background: linear-gradient(90deg, rgba(103,34,128,1) 35%, rgba(166,38,211,1) 100%);
-}
 
 .header--left{
   display: flex;
@@ -45,16 +35,11 @@ body{
   letter-spacing: 1px;
   font-size: 17px;
   font-weight: 300;
+  display: flex;
+  gap: 10px
 }
 
-.meme{
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
+
 
 
 
@@ -78,18 +63,15 @@ body{
 
 
 
-button{
-  width: 800px;
-  height: 50px;
-  border-radius: 8px;
-  border: none;
-  background: rgb(103,34,128);
-  background: linear-gradient(90deg, rgba(103,34,128,1) 35%, rgba(166,38,211,1) 100%);
-  font-family: 'Kodchasan', sans-serif;
-  color: white;
-  font-size: 20px;
-  font-weight: 700;
+.darkModeBut{
+  height: 30px;
+  width: 30px;
   cursor: pointer;
+}
+
+.darkMode{
+  background-color: transparent;
+  border: none;
 }
 
 .meme--image{

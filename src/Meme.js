@@ -2,7 +2,7 @@ import React from "react";
 import memesData from './memesData';
 
 
-const Meme = () => {
+const Meme = (props) => {
 
   const [meme, setMeme] = React.useState({
     topText: "lkjsgdkslg",
@@ -28,8 +28,30 @@ const Meme = () => {
     
 
   }
+
+  const styles = {
+    backgroundColor : props.darkMode ? "#144272" : "#FFA1CF",
+    padding: "30px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "30px"
+  }
+
+  const buttonStyle = {
+    backgroundColor : props.darkMode ? "#91D8E4" : "#FFD6EC",
+    width: "800px",
+    height:" 50px",
+    borderRadius: "8px",
+    border:"none",   
+    fontFamily: "'Kodchasan', sans-serif",
+    fontSize: "20px",
+    fontWeight:"700",
+    cursor: "pointer"
+  }
   return (
-    <div className="meme">
+    <div className="meme" style={styles}>
         <div className="form--top">
           <input
             type="text"
@@ -44,7 +66,7 @@ const Meme = () => {
             placeholder="Second Line"
           ></input>
         </div>  
-        <button onClick= {getMemeImg}>Get a new meme image</button>
+        <button onClick= {getMemeImg} style={buttonStyle}>Get a new meme image</button>
         <img src={meme.randomImage} alt='meme' className="meme--image"/>  
     </div>
   );
