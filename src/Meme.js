@@ -5,12 +5,23 @@ import memesData from './memesData';
 const Meme = (props) => {
 
   const [meme, setMeme] = React.useState({
-    topText: "lkjsgdkslg",
-    bottomText : "dkgjdslkgjs",
+    topText: "",
+    bottomText : "",
     randomImage: "http://i.imgflip.com/1bij.jpg"
   });
 
-  const [allMemeImages , setAllMmemeImages] = React.useState(memesData)
+  function handleChange(event){
+    const {name, value} = event.target
+    setMeme(prevMeme => ({
+      ...prevMeme,
+      [name] : value
+
+    }))
+
+
+  }
+
+  const [allMemeImages , setAllMemeImages] = React.useState(memesData)
 
 
 
@@ -51,23 +62,35 @@ const Meme = (props) => {
     cursor: "pointer"
   }
   return (
-    <div className="meme" style={styles}>
+    <div style={styles}>
         <div className="form--top">
+          <div className="top-input">
           <input
             type="text"
             id="first-line"
-            name="fline"
+            name="topText"
             placeholder="First Line"
+            value={meme.topText}
+            onChange={handleChange}
           ></input>
           <input
             type="text"
             id="second-line"
-            name="sline"
+            name="bottomText"
             placeholder="Second Line"
+            value={meme.bottomText}
+            onChange={handleChange}
           ></input>
+          </div>
+          <button onClick= {getMemeImg} style={buttonStyle}>Get a new meme image</button>
+
         </div>  
-        <button onClick= {getMemeImg} style={buttonStyle}>Get a new meme image</button>
-        <img src={meme.randomImage} alt='meme' className="meme--image"/>  
+        <div className="meme">
+        <img src={meme.randomImage} alt='meme' className="meme--image"/> 
+        <h2 className="meme-text top">{meme.topText}</h2> 
+        <h2 className="meme-text bottom">{meme.bottomText}</h2> 
+
+        </div>
     </div>
   );
 };

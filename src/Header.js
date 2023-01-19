@@ -1,6 +1,7 @@
 import React from "react";
 import troll from './assets/Troll Face.png'
 import darkModebutton from './assets/night-mode.png'
+import lightModebutton from './assets/brightness.png'
 
 const Header = (props) => {
 
@@ -27,7 +28,7 @@ const Header = (props) => {
                 <h1 className="header--title" style={titleStyles}>Meme Generator</h1>
             </div>
             <div className="header--right">
-                <button className="darkMode" onClick={props.toggleMode}><img className="darkModeBut" src={darkModebutton} alt="darkMode"/></button>
+                <button className="darkMode" onClick={props.toggleMode}><img className="darkModeBut" src={props.darkMode ? darkModebutton : lightModebutton} alt="darkMode"/></button>
                 <h3 style={titleStyles}>React Course - Project 3</h3>
             </div>
         </div>
